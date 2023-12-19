@@ -1,7 +1,17 @@
-[gd_scene format=3 uid="uid://cu7khl2e3w6gc"]
+[gd_scene load_steps=3 format=3 uid="uid://cu7khl2e3w6gc"]
+
+[ext_resource type="Texture2D" uid="uid://clwpo83yorvtm" path="res://assets/enemy.png" id="1_oxvcd"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2pdq6"]
+radius = 258.0
+height = 972.0
 
 [node name="Enemy" type="RigidBody2D"]
+gravity_scale = 2.66454e-15
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_oxvcd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-29.5, 68)
+shape = SubResource("CapsuleShape2D_2pdq6")
